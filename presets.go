@@ -308,3 +308,108 @@ func NewChrome119iOS() *Fingerprint {
 		},
 	}
 }
+
+// NewChrome134Android returns a Chrome 134 fingerprint for Android 14 (Pixel 8a)
+func NewChrome134Android() *Fingerprint {
+	return &Fingerprint{
+		UserAgent: "Mozilla/5.0 (Linux; Android 14; Pixel 8a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",
+		Platform:  "Linux armv8l",
+		Vendor:    "Google Inc.",
+		Language:  "en-US",
+		Languages: []string{"en-US", "en"},
+		Screen: &Screen{
+			Width:            1080,
+			Height:           2400,
+			AvailWidth:       1080,
+			AvailHeight:      2340,
+			ColorDepth:       24,
+			PixelDepth:       24,
+			DevicePixelRatio: 2.75,
+		},
+		Timezone: &Timezone{
+			ID:     "Europe/Berlin",
+			Offset: -60,
+		},
+		WebGL: &WebGL{
+			Vendor:                 "Google Inc. (Qualcomm)",
+			Renderer:               "ANGLE (Qualcomm, Adreno (TM) 740, OpenGL ES 3.2)",
+			UnmaskedVendor:         "Qualcomm",
+			UnmaskedRenderer:       "Adreno (TM) 740",
+			ShadingLanguageVersion: "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+		},
+		Canvas: &Canvas{
+			Noise: 0.01,
+		},
+		WebRTC: &WebRTC{
+			Disable: false,
+		},
+		Fonts: []string{
+			"Roboto", "Noto Sans", "Droid Sans", "sans-serif", "serif", "monospace",
+		},
+		Plugins:             []Plugin{},
+		HardwareConcurrency: 8,
+		DeviceMemory:        8,
+		Audio: &Audio{
+			Noise: 0.01,
+		},
+		Battery: &Battery{
+			Charging:        false,
+			ChargingTime:    0,
+			DischargingTime: 7200,
+			Level:           0.87,
+		},
+	}
+}
+
+// NewChrome134Windows11 returns a Chrome 134 fingerprint for Windows 11
+func NewChrome134Windows11() *Fingerprint {
+	return &Fingerprint{
+		UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+		Platform:  "Win32",
+		Vendor:    "Google Inc.",
+		Language:  "en-US",
+		Languages: []string{"en-US", "en"},
+		Screen: &Screen{
+			Width:            1920,
+			Height:           1080,
+			AvailWidth:       1920,
+			AvailHeight:      1040,
+			ColorDepth:       24,
+			PixelDepth:       24,
+			DevicePixelRatio: 1.0,
+		},
+		Timezone: &Timezone{
+			ID:     "America/New_York",
+			Offset: -240,
+		},
+		WebGL: &WebGL{
+			Vendor:                 "Google Inc. (NVIDIA)",
+			Renderer:               "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Direct3D11 vs_5_0 ps_5_0, D3D11)",
+			UnmaskedVendor:         "NVIDIA Corporation",
+			UnmaskedRenderer:       "NVIDIA GeForce RTX 3060/PCIe/SSE2",
+			ShadingLanguageVersion: "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+		},
+		Canvas: &Canvas{
+			Noise: 0.01,
+		},
+		WebRTC: &WebRTC{
+			Disable: false,
+		},
+		Fonts: []string{
+			"Arial", "Calibri", "Cambria", "Consolas", "Courier New",
+			"Georgia", "Segoe UI", "Times New Roman", "Verdana", "Trebuchet MS",
+		},
+		Plugins:             []Plugin{},
+		HardwareConcurrency: 12,
+		DeviceMemory:        16,
+		Audio: &Audio{
+			Noise: 0.01,
+		},
+		Battery: &Battery{
+			Charging:        true,
+			ChargingTime:    0,
+			DischargingTime: 0,
+			Level:           1.0,
+		},
+	}
+}
